@@ -1,0 +1,26 @@
+sources:
+  my_source_id:
+    type: socket
+    address: 0.0.0.0:80
+    host_key: host
+    max_length: 102400
+    mode: tcp
+    path: /path/to/socket
+    permit_origin:
+      - 192.168.0.0/16
+    port_key: port
+    shutdown_timeout_secs: 30
+    socket_file_mode: 511
+
+
+
+sinks:
+  out:
+    inputs: 
+      - my_source_id
+    type: "console"
+    encoding:
+      codec: "text"
+
+
+
