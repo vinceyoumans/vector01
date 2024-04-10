@@ -41,3 +41,9 @@ ERROR source{component_kind="source" component_id=my_source_id component_type=so
 ```
 
 
+
+
+main2
+Not sure how to pass sLog to a handler,  but my first guess is this.. and it works.
+passing net.Conn to slog.NewJSONHandler as io.Writer
+But I still prefer the original way I did it.
